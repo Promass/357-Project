@@ -1,0 +1,119 @@
+.Home-search-box {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.Home-search-input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: #373737;
+    padding-left: 10px;
+    color: white;
+}
+
+.Home-search-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    width: 70px;
+    border: none;
+    border-radius: 5px;
+    background-color: #BB86FC;
+    color: white;
+}
+
+.Home-search-btn:hover {
+    background: rgba(187, 134, 252, 0.5);
+    color: white;
+    transition: 0.3s;
+}
+
+.Home-map-box {
+    width: 100%;
+    height: 600px;
+    background-color: #373737;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.Home-map {
+    width: 100%;
+    height: 100%;
+}
+
+.Home-rules-box {
+    width: 100%;
+    background-color: #373737;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.Home-rules-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.Home-rules-text h4, .Home-rules-text p {
+    margin: 0px;
+    color: white;
+}
+
+.Home-rules-btn {
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background-color: #BB86FC;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.Home-rules-btn:hover {
+    background: rgba(187, 134, 252, 0.5);
+    color: white;
+    transition: 0.3s;
+}
+
+.Home-rules-tail {
+    max-width: 100%;
+}
+
+.Home-rules-tail th {
+    color: white;
+}
+
+.Home-rules-tail .Home-table-fth {
+    padding-right: 50px;
+}
+
+.Home-rules-tail td {
+    color: white;
+    border-left: solid white;
+    border-width: thin;
+    border-top: none;
+}
+
+.Home-td-green {
+    width: 100%;
+    height: 100%;
+    background-color: #25C066 !important;
+}
+
+.Home-td-red {
+    width: 100%;
+    height: 100%;
+    background-color: #CF6679 !important;
+}
