@@ -15,9 +15,6 @@
 
     <div class="container Auth-mother-box">
         <div class="Auth-child-box">
-            <div class="Auth-logo-box">
-                <a href="/Home/"><img src="../../../assets/logo.png" alt="logo" width="300"></a>
-            </div>
             <div class="Auth-form-box">
                 <form method="post">
                     <div class="Auth-form-head">
@@ -28,32 +25,32 @@
                             <div>
                                 First Name
                             </div>
-                            <input type="text">
+                            <input type="text" name="fname" required>
                         </div>
                         <div style="padding-left: 10px; width: 50%;">
                             <div>
                                 Last Name
                             </div>
-                            <input type="text">
+                            <input type="text" name="lname" required>
                         </div>
                     </div>
                     <div class="Auth-form-input">
                         <div>
                             Username
                         </div>
-                        <input type="text">
+                        <input type="text" name="username" required>
                     </div>
                     <div class="Auth-form-input">
                         <div>
                             Password
                         </div>
-                        <input type="text">
+                        <input type="text" name="password" required>
                     </div>
                     <div class="Auth-form-input">
                         <div>
                             Email
                         </div>
-                        <input type="text">
+                        <input type="text" name="email" required>
                     </div>
                     <div class="Auth-form-btn">
                         <button type="submit" name="signup">Sign Up</button>

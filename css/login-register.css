@@ -5,13 +5,18 @@ html, body {
 
 .Auth-logo-box {
     text-align: center;
+    margin-bottom: 50px;
+}
+
+.Auth-logo-box img{
+    width: 200px;
 }
 
 .Auth-mother-box {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .Auth-child-box {
@@ -20,9 +25,9 @@ html, body {
 
 .Auth-form-box {
     background-color: #373737;
-    margin-top: 50px;
     padding: 40px 20px;
     border-radius: 5px;
+    width: 436px;
 }
 
 .Auth-form-head {
@@ -50,7 +55,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 40px 0px 30px 0px;
 }
 
 .Auth-form-btn button {
@@ -77,4 +82,10 @@ html, body {
 .Auth-form-special {
     display: flex;
     width: 100%;
+}
+
+@media only screen and (max-width: 437px) {
+    .Auth-form-box {
+        width: 90vw;
+    }
 }

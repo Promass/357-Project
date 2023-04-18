@@ -35,14 +35,30 @@ if (isset($data['search']) && isset($data['longitude']) && isset($data['latitude
     <div class="Nav-bar-box sticky-top">
         <div class="container Nav-item-box">
             <div class="Nav-link-box">
-                <a href="" class="Nav-link" style="background-color: #BB86FC;">HOME</a>
-                <a href="" class="Nav-link" style="border-right: solid #828282; border-width: thin;">TRAFFIC</a>
-                <a href="" class="Nav-link" style="border-right: solid #828282; border-width: thin;">HOTSPOTS</a>
-                <a href="" class="Nav-link" style="border-right: solid #828282; border-width: thin;">SAVED</a>
+            <a href="/Home/" class="Nav-link" style="background-color: #BB86FC;">HOME</a>
+                <a href="/Traffic/" class="Nav-link" style="border-right: solid #828282; border-width: thin;">TRAFFIC</a>
+                <a href="/Hotspot/" class="Nav-link" style="border-right: solid #828282; border-width: thin;">HOTSPOTS</a>
+                <?php
+                
+                if (isset($_SESSION['user_id'])) {
+                    echo '<a href="/Saved/" class="Nav-link" style="border-right: solid #828282; border-width: thin;">SAVED</a>';
+                }
+
+                ?>
             </div>
             <div class="Nav-link-box">
                 <a href="" class="Nav-question-btn">?</a>
-                <a href="/Authentication/Login" class="Nav-login-btn">LOGIN</a>
+                <?php
+                
+                    if (isset($_SESSION['user_id'])) {
+                        echo '<a href="/Authentication/Logout" class="Nav-login-btn">LOGOUT</a>';
+                    }
+                    else {
+                        echo '<a href="/Authentication/Login" class="Nav-login-btn">LOGIN</a>';
+                    }
+
+                ?>
+                
             </div>
         </div>
     </div>
@@ -71,10 +87,6 @@ if (isset($data['search']) && isset($data['longitude']) && isset($data['latitude
             </div>
         </form>
 
-        <div class="Home-map-box">
-            <div id="Map-google" class="Home-map"></div>
-        </div>
-
         <?php
 
         if (isset($data['search']) && isset($data['longitude']) && isset($data['latitude']) && isset($data['schedule'])) {
@@ -88,7 +100,7 @@ if (isset($data['search']) && isset($data['longitude']) && isset($data['latitude
                         </div>
                 ';
             if (isset($_SESSION['user_id'])) {
-                echo '<a href="" class="Home-rules-btn">Save</a>';
+                echo '<a href="/Saved/Save/'. $data['schedule']->id .'" class="Home-rules-btn">Save</a>';
             }
             echo '
                     </div>
@@ -114,6 +126,10 @@ if (isset($data['search']) && isset($data['longitude']) && isset($data['latitude
         }
 
         ?>
+
+        <div class="Home-map-box">
+            <div id="Map-google" class="Home-map"></div>
+        </div>
 
     </div>
 

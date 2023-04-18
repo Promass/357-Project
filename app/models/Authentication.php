@@ -13,6 +13,13 @@ class Authentication extends Model {
         $stmt->setFetchMode(PDO::FETCH_CLASS, "Authentication");
         return $stmt->fetch();
     }
+
+    public function signupUser() {
+        $stmt = $this->_connection->prepare("INSERT INTO users (username, password) VALUES (:username, :password);");
+        $stmt->execute(['username'=>$this->username, 'password'=>$this->password]);
+
+        return $stmt->rowCount();
+    }
 }
 
 ?>

@@ -2,9 +2,9 @@
 -- Database: `357-project`
 --
 
-DROP DATABASE IF EXISTS `343-project`;
-CREATE DATABASE IF NOT EXISTS `343-project` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `343-project`;
+DROP DATABASE IF EXISTS `357-project`;
+CREATE DATABASE IF NOT EXISTS `357-project` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `357-project`;
 
 -- --------------------------------------------------------
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `rules` (
 --
 -- Load data for table `rules`
 --
-LOAD DATA INFILE '#'
+LOAD DATA INFILE 'C:\\xampp\\htdocs\\357-Project\\app\\db\\rules.csv'
 INTO TABLE rules
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'

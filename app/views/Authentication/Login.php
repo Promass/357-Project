@@ -13,10 +13,10 @@
 
 <body>
 
-    <div class="container-fluid Auth-mother-box">
+    <div class="container Auth-mother-box">
         <div class="Auth-child-box">
             <div class="Auth-logo-box">
-                <a href="/Home/"><img src="../../../assets/logo.png" alt="logo" width="300"></a>
+                <a href="/Home/"><img src="../../../assets/logo.png" alt="logo"></a>
             </div>
             <div class="Auth-form-box">
                 <form method="post">
