@@ -89,6 +89,15 @@
 
 .Home-rules-tail {
     max-width: 100%;
+    color: white;
+}
+
+.Home-rules-info {
+    background: rgba(187, 134, 252, 0.5);
+    padding: 20px;
+    border: solid #BB86FC;
+    border-radius: 5px;
+    border-width: thin;
 }
 
 .Home-rules-tail th {

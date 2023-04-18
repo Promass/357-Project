@@ -27,20 +27,19 @@
                         <div>
                             Username
                         </div>
-                        
-                        <input type="text">
+                        <input type="text" name="username" required>
                     </div>
                     <div class="Auth-form-input">
                         <div>
                             Password
                         </div>
-                        <input type="text">
+                        <input type="text" name="password" required>
                     </div>
                     <div class="Auth-form-btn">
-                        <button>Log In</button>
+                        <button type="submit" name="login">Log In</button>
                     </div>
                     <div style="text-align: center;">
-                        Don't have an account? <a href="">Register</a>
+                        Don't have an account? <a href="/Authentication/Register">Register</a>
                     </div>
                 </form>
             </div>

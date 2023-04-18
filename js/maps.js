@@ -19,6 +19,21 @@ function initGoogle() {
     var marker = null;
     var bounds = new google.maps.LatLngBounds();
 
+    if (localStorage.getItem("longitude") !== null && localStorage.getItem("latitude") !== null) {
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(localStorage.getItem("latitude"), localStorage.getItem("longitude")),
+            title: 'Searched Address'
+        });
+
+        bounds.extend(marker.position);
+        marker.setMap(map);
+        map.panTo(marker.position);
+        map.setZoom(16);
+
+        localStorage.removeItem("longitude");
+        localStorage.removeItem("latitude");
+    }
+
     autocomplete.addListener("place_changed", () => {
         const place = autocomplete.getPlace();
         if (marker == null) {
@@ -47,14 +62,16 @@ function initGoogle() {
             map.panTo(marker.position);
             map.setZoom(16);
         }
+
+
     });
 
-    document.getElementById("Home-search-address").addEventListener('focusout', () => {
+    /*document.getElementById("Home-search-address").addEventListener('focusout', () => {
         if (document.getElementById('Home-search-address').value == '') {
             marker.setMap(null);
             marker = null;
         }
-    });
+    });*/
 }
 
 function placeCoordinates(longitude, latitude) {

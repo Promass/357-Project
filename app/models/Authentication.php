@@ -5,7 +5,6 @@ class Authentication extends Model {
     public $id;
     public $username;
     public $password;
-    public $u_type;
 
     public function loginUser() {
         $stmt = $this->_connection->prepare("SELECT * FROM users WHERE username = :username AND password = :password;");

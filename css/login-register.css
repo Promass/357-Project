@@ -1,0 +1,80 @@
+html, body {
+    background-color: #121212;
+    height: 100%;
+}
+
+.Auth-logo-box {
+    text-align: center;
+}
+
+.Auth-mother-box {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Auth-child-box {
+    color: white;
+}
+
+.Auth-form-box {
+    background-color: #373737;
+    margin-top: 50px;
+    padding: 40px 20px;
+    border-radius: 5px;
+}
+
+.Auth-form-head {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.Auth-form-input {
+    margin-bottom: 20px;
+}
+
+.Auth-form-input div {
+    margin-bottom: 5px;
+}
+
+.Auth-form-input input {
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    border: none;
+    padding-left: 5px;
+}
+
+.Auth-form-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Auth-form-btn button {
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background-color: #BB86FC;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.3s;
+    border: none;
+}
+
+.Auth-form-btn button:hover {
+    background: rgba(187, 134, 252, 0.5);
+    color: white;
+    transition: 0.3s;
+}
+
+.Auth-form-special {
+    display: flex;
+    width: 100%;
+}
