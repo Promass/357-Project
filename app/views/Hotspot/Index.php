@@ -22,9 +22,9 @@
     <div class="Nav-bar-box sticky-top">
         <div class="container Nav-item-box">
             <div class="Nav-link-box">
-                <a href="/Home/" class="Nav-link" style="background-color: #BB86FC;">HOME</a>
+                <a href="/Home/" class="Nav-link" style="border-left: solid #828282; border-right: solid #828282; border-width: thin;">HOME</a>
                 <a href="/Traffic/" class="Nav-link" style="border-right: solid #828282; border-width: thin;">TRAFFIC</a>
-                <a href="/Hotspot/" class="Nav-link" style="border-right: solid #828282; border-width: thin;">HOTSPOTS</a>
+                <a href="/Hotspot/" class="Nav-link" style="background-color: #BB86FC;">HOTSPOTS</a>
                 <?php
                 
                 if (isset($_SESSION['user_id'])) {

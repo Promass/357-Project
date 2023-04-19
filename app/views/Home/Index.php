@@ -100,7 +100,9 @@ if (isset($data['search']) && isset($data['longitude']) && isset($data['latitude
                         </div>
                 ';
             if (isset($_SESSION['user_id'])) {
-                echo '<a href="/Saved/Save/'. $data['schedule']->id .'" class="Home-rules-btn">Save</a>';
+                if (is_object($data['schedule'])) {
+                    echo '<a href="/Saved/Save/'. $data['schedule']->id .'" class="Home-rules-btn">Save</a>';
+                }
             }
             echo '
                     </div>
@@ -136,7 +138,7 @@ if (isset($data['search']) && isset($data['longitude']) && isset($data['latitude
     <!-- CONTENT -->
 
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3FRojcfkJxd8nVBad0DLAeneZcKYbuJE&libraries=places&callback=initGoogle"></script>
-    <script type="text/javascript" src="../../../js/maps.js"></script>
+    <script type="text/javascript" src="../../../js/HomeMap.js"></script>
 
 </body>
 

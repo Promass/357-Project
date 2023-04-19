@@ -1,7 +1,6 @@
 --
 -- Database: `357-project`
 --
-
 DROP DATABASE IF EXISTS `357-project`;
 CREATE DATABASE IF NOT EXISTS `357-project` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `357-project`;
@@ -23,11 +22,23 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 DROP TABLE IF EXISTS `rules`;
 CREATE TABLE IF NOT EXISTS `rules` (
-  `id` INT(7) PRIMARY KEY,
-  `longitude` VARCHAR(20) DEFAULT NULL,
-  `latitude` VARCHAR(20) DEFAULT NULL,
-  `descr` LONGTEXT DEFAULT NULL,
-  `area` TINYTEXT DEFAULT NULL
+    `id` INT(7) PRIMARY KEY,
+    `longitude` VARCHAR(20) DEFAULT NULL,
+    `latitude` VARCHAR(20) DEFAULT NULL,
+    `descr` LONGTEXT DEFAULT NULL,
+    `area` TINYTEXT DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Table structure for table `saved`
+--
+DROP TABLE IF EXISTS `saved`;
+CREATE TABLE IF NOT EXISTS `saved` (
+    `id` INT(7) PRIMARY KEY AUTO_INCREMENT,
+    `uid` INT(11) NOT NULL,
+    `sid` INT(11) NOT NULL,
+    FOREIGN KEY (`uid`) REFERENCES users (`id`),
+    FOREIGN KEY (`sid`) REFERENCES rules (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------

@@ -15,6 +15,16 @@ class Home extends Model {
         $stmt->setFetchMode(PDO::FETCH_CLASS, "Home");
         return $stmt->fetch();
     }
+
+    public function getSchedulesForUser($uid) {
+        $stmt = $this->_connection->prepare("SELECT R.id, R.longitude, R.latitude, R.descr, R.area
+        FROM saved S, rules R
+        WHERE S.uid = :uid AND S.sid = R.id;");
+        $stmt->execute(['uid'=>$uid]);
+
+        $stmt->setFetchMode(PDO::FETCH_CLASS, 'Home');
+        return $stmt->fetchAll();
+    }
 }
 
 ?>

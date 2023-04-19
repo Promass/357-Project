@@ -7,19 +7,17 @@ class Saved extends Model {
     public $sid;
 
     public function saveSchedule() {
-        $stmt = $this->_connection->prepare("SELECT * FROM rules WHERE longitude LIKE :longitude AND latitude LIKE :latitude LIMIT 1;");
-        $stmt->execute(['longitude'=>($this->longitude.'%'), 'latitude'=>($this->latitude.'%')]);
+        $stmt = $this->_connection->prepare("INSERT INTO saved (uid, sid) VALUES (:uid, :sid);");
+        $stmt->execute(['uid'=>$this->uid, 'sid'=>$this->sid]);
 
-        $stmt->setFetchMode(PDO::FETCH_CLASS, "Home");
-        return $stmt->fetch();
+        return $stmt->rowCount();
     }
 
-    public function getSchedulesForUser() {
-        $stmt = $this->_connection->prepare("SELECT * FROM rules WHERE longitude LIKE :longitude AND latitude LIKE :latitude LIMIT 1;");
-        $stmt->execute(['longitude'=>($this->longitude.'%'), 'latitude'=>($this->latitude.'%')]);
+    public function removeSavedSchedule() {
+        $stmt = $this->_connection->prepare("DELETE FROM saved WHERE uid = :uid AND sid = :sid;");
+        $stmt->execute(['uid'=>$this->uid, 'sid'=>$this->sid]);
 
-        $stmt->setFetchMode(PDO::FETCH_CLASS, "Home");
-        return $stmt->fetch();
+        return $stmt->rowCount();
     }
 }
 
