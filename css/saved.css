@@ -32,6 +32,7 @@
 
 .Saved-item-box {
     overflow-y: scroll;
+    max-height: 423px;
 }
 
 .Saved-item-m {
