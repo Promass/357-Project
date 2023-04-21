@@ -34,7 +34,7 @@
                 ?>
             </div>
             <div class="Nav-link-box">
-                <a href="" class="Nav-question-btn">?</a>
+                <a href="/Guide/" class="Nav-question-btn">?</a>
                 <?php
                 
                     if (isset($_SESSION['user_id'])) {

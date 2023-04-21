@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif !important;
+    color: white;
+}
+
+.Guide-container * {
+    width: 100%;
+}
+
+.Guide-container {
+    margin-top: 50px;
+    margin-bottom: 300px;
+}
+
+.Guide-h1 {
+    text-align: center;
+}
+
+.Guide-h4 {
+    margin-top: 100px;
+}
+
+.Guide-p {
+    text-justify: justify;
+}
+
+.Guide-img-div {
+    padding: 10px;
+    margin: 30px auto;
+    background-color: #373737;
+    border-radius: 5px;
+}
+
+.Guide-logo {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.Guide-logo img {
+    width: 300px;
+}
