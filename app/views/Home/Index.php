@@ -137,7 +137,7 @@ if (isset($data['search']) && isset($data['longitude']) && isset($data['latitude
 
     <!-- CONTENT -->
 
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3FRojcfkJxd8nVBad0DLAeneZcKYbuJE&libraries=places&callback=initGoogle"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initGoogle"></script>
     <script type="text/javascript" src="../../../js/HomeMap.js"></script>
 
 </body>
